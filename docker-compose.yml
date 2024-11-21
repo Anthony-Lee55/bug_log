@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/bug_log_api:latest
+    restart: unless-stopped
+    env_file:
+      - bug_log_api-env
+    ports:
+      - "3000:3000"
