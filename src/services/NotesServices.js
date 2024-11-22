@@ -16,6 +16,10 @@ class NotesService {
     if (noteByBugId == null) throw new Error(`Invalid id: ${bugId}`)
     return noteByBugId
   }
+
+  async removeNote() {
+    const removedNote = await dbContext.Note.deleteMany()
+  }
 }
 
 export const notesService = new NotesService()

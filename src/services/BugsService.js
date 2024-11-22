@@ -42,6 +42,8 @@ class BugsService {
     await bugToRemove.deleteOne()
     return "Bug was stepped on"
   }
+
+
 }
 
 export const bugsService = new BugsService()
